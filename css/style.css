@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+  }
+
+div {
+    display: block;
+}  
+
 .gallery {
     display: flex;
     flex-wrap: wrap;}

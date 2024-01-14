@@ -9,12 +9,8 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxesContainer = document.getElementById('boxes');
 
-/*Сall to classes*/
-
 createBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
-
-/*Create eventlistener into button */
 
 function createBoxes() {
   const amount = input.value;
@@ -23,8 +19,6 @@ function createBoxes() {
     alert('Please enter a number between 1 and 100.');
     return;
   }
-
-  /*Validate amount*/
 
   const boxes = Array.from({ length: amount }, (_, index) => {
     const box = document.createElement('div');
@@ -36,8 +30,9 @@ function createBoxes() {
 
   boxesContainer.append(...boxes);
 }
-/*Creates elements */
 
 function destroyBoxes() {
-  boxesContainer.innerHTML = '';
+  while (boxesContainer.firstChild) {
+    boxesContainer.removeChild(boxesContainer.firstChild);
+  }
 }
