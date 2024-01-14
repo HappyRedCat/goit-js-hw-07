@@ -4,24 +4,24 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const input = document.querySelector('input');
-const createBtn = document.querySelector('[data-create]');
-const destroyBtn = document.querySelector('[data-destroy]');
-const boxesContainer = document.getElementById('boxes');
+const input = document.querySelector("input");
+const createBtn = document.querySelector("[data-create]");
+const destroyBtn = document.querySelector("[data-destroy]");
+const boxesContainer = document.getElementById("boxes");
 
-createBtn.addEventListener('click', createBoxes);
-destroyBtn.addEventListener('click', destroyBoxes);
+createBtn.addEventListener("click", createBoxes);
+destroyBtn.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
   const amount = input.value;
 
   if (amount < 1 || amount > 100) {
-    alert('Please enter a number between 1 and 100.');
+    alert("Please enter a number between 1 and 100.");
     return;
   }
 
   const boxes = Array.from({ length: amount }, (_, index) => {
-    const box = document.createElement('div');
+    const box = document.createElement("div");
     box.style.width = `${30 + index * 10}px`;
     box.style.height = `${30 + index * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
