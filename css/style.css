@@ -1,0 +1,11 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;}
+
+.js-item {
+        margin-right: 40px;
+    }
+  
+img {
+    width: 250px;
+}
