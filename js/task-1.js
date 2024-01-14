@@ -13,16 +13,16 @@
 
 */
 
-function calculateUl() {
+function kalculateUl() {
   const calcCategories = document.querySelectorAll('.item');
 
-  // calcCategories.forEach(category => {
-  //   const categoryTitle = category.querySelector('h2').textContent;
-  //   const categoryItems = category.querySelectorAll('li').length;
+  calcCategories.forEach(category => {
+    const categoryTitle = category.querySelector('h2').textContent;
+    const categoryItems = category.querySelectorAll('li').length;
 
-  //   console.log(`Category: ${categoryTitle}`);
-  //   console.log(`Elements: ${categoryItems}`);
-  // });
+    console.log(categoryTitle);
+    console.log(categoryItems);
+  });
 }
 
-calculateUl();
+kalculateUl();
